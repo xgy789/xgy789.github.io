@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>地球日</title>
+<style> 
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.banner {
+  width: 900px;
+  height: 400px;
+  background-size: 100% 100%;
+  margin: 30px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.banner > img {
+  width: 100%;
+  display: block;
+}
+.prev,.next {
+  position: absolute;
+  z-index: 9999;
+  cursor: pointer;
+}
+.prev {left: 20px;}
+.next {right: 20px;}
+.dots{
+   
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+}
+.dot {
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+   background: url(images/point1.png) no-repeat;
+
+}
+ .dot.on {
+            background-image: url(images/point2.png);
+        }
+   .dot:hover{
+            background-image: url(images/point2.png);
+            cursor: pointer;
+        }
+</style>
+</head>
+<body>
+    
+<div class="banner">
+  <a href=" " class="prev"><img src="images/arrow1.png"></a >
+  <img src="images/banner1.jpg">
+  <a href="javascript:void(0);" class="next"><img src="images/arrow2.png"></a >
+
+  <div class="dots">
+            <span class="dot"></span>
+            <span class="dot on"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+</div>
+</body>
+</html>
