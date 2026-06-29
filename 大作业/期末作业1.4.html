@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>TRAE 更新日志 changelog</title>
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    background:#000000;
+    color:#ffffff;
+    font-family:"Microsoft Yahei",sans-serif;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 16px;
+}
+
+/* ① 导航栏 */
+.top-nav{
+    display:flex;
+    align-items:center;
+    padding:10px 0;
+}
+.logo{
+    font-size:18px;
+    font-weight:bold;
+    margin-right:30px;
+}
+.nav-list{
+    display:flex;
+    gap:26px;
+}
+.nav-list a{
+    color:#cccccc;
+    text-decoration:none;
+    font-size:13px;
+}
+.nav-list a.active{
+    color:#fff;
+}
+.user-circle{
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    background:#222;
+    margin-left:auto;
+}
+
+/* ② 顶部横幅+渐变文字（已移除红框border） */
+.banner-wrap{
+    /* 删掉 border:1px solid #ff4444; */
+    text-align:center;
+    padding:40px 0;
+    margin:20px 0;
+}
+.banner-small{
+    color:#4cd964;
+    font-size:13px;
+    margin-bottom:8px;
+}
+.big-title{
+    font-size:34px;
+}
+.grad-text{
+    background:linear-gradient(90deg,#36e06e,#00d0ff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+.banner-desc{
+    color:#999;
+    font-size:13px;
+    margin:10px 0 20px;
+}
+.banner-btn{
+    background:#111;
+    border:1px solid #444;
+    color:#fff;
+    padding:6px 18px;
+}
+
+/* ③④ 时间线核心样式（已移除红框border） */
+.log-container{
+    /* 删掉 border:1px solid #ff4444; */
+    padding:20px 20px 20px 42px;
+}
+.log-item{
+    position:relative;
+    margin:26px 0;
+}
+/* 白色方块圆点，压在虚线上 */
+.log-item::before{
+    content:"";
+    position:absolute;
+    left:-31px;
+    top:5px;
+    width:8px;
+    height:8px;
+    background:#ffffff;
+    z-index:2;
+}
+/* 拉长向下的虚线 */
+.log-item::after{
+    content:"";
+    position:absolute;
+    left:-27px;
+    top:13px;
+    width:2px;
+    /* 增大高度，让下方虚线更长 */
+    height:calc(100% + 35px);
+    border-left:2px dashed #777;
+    z-index:1;
+}
+/* 最后一条单独设置超长底部虚线 */
+.log-item:last-child::after{
+    height: 100px;
+}
+.log-date{
+    color:#4cd964;
+    font-size:16px;
+    margin-bottom:8px;
+}
+.log-tag-group{
+    display:flex;
+    gap:12px;
+    margin-bottom:8px;
+}
+.log-tag{
+    background:#1a1a1a;
+    padding:3px 10px;
+    font-size:13px;
+    color:#aaa;
+    border-radius:2px;
+}
+.log-text li{
+    list-style:none;
+    color:#ccc;
+    font-size:13px;
+    line-height:1.7;
+}
+</style>
+</head>
+<body>
+<!-- ① 导航栏区域 -->
+<div class="top-nav">
+    <div class="logo">TRAE</div>
+    <div class="nav-list">
+        <a href=" ">产品</a >
+        <a href="#">企业版</a >
+        <a href="#">定价</a >
+        <a href="#">文档</a >
+        <a href="#" class="active">更新日志</a >
+        <a href="#">社区</a >
+        <a href="#">知识库</a >
+    </div>
+    <div class="user-circle"></div>
+</div>
+
+<!-- ② 标题横幅区域（无红框） -->
+<div class="banner-wrap">
+    <div class="banner-small">更新日志</div>
+    <h2 class="big-title">探索 TRAE 的<span class="grad-text">最新动态</span></h2>
+    <p class="banner-desc">随时掌握TRAE的变化，了解我们为您带来的创新与优化</p >
+    <button class="banner-btn">了解更多</button>
+</div>
+
+<!-- ③④ 时间线列表（无外层红框） -->
+<div class="log-container">
+    <div class="log-item">
+        <div class="log-date">2026-06-09</div>
+        <div class="log-tag-group">
+            <span class="log-tag">v8.8.8</span>
+            <span class="log-tag">TRAE APP</span>
+        </div>
+        <ul class="log-text">
+            <li>• TRAE APP 支持对登录设备删除/重命名的操作。</li>
+            <li>• TRAE APP 可选择内置模型、自定义模型、其他模型等。</li>
+        </ul>
+    </div>
+
+    <div class="log-item">
+        <div class="log-date">2026-06-09</div>
+        <div class="log-tag-group">
+            <span class="log-tag">v8.1.18</span>
+            <span class="log-tag">TRAE Work</span>
+        </div>
+        <ul class="log-text">
+            <li>• TRAE SOLO 升级为 TRAE Work。</li>
+            <li>• TRAE Work 支持企业账号登录。</li>
+        </ul>
+    </div>
+
+    <div class="log-item">
+        <div class="log-date">2026-06-08</div>
+        <div class="log-tag-group">
+            <span class="log-tag">v8.1.16-8.1.17</span>
+            <span class="log-tag">TRAE Work</span>
+        </div>
+        <ul class="log-text">
+            <li>• 修复了一些线上已知问题。</li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

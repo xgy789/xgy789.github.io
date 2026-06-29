@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>TRAE定价页</title>
+    <style>
+        /* 全局基础重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #1a1a1a;
+            color: #ffffff;
+            font-family: "微软雅黑", sans-serif;
+        }
+
+        /* ① 导航栏 */
+        .nav {
+            display: flex;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 15px 20px;
+            gap: 30px;
+        }
+
+        .nav-logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #fff;
+        }
+
+        .nav a {
+            color: #ccc;
+            text-decoration: none;
+            font-size: 16px;
+        }
+
+        .nav a:hover {
+            color: #fff;
+        }
+
+        .hot-tag {
+            color: #39ff14;
+            font-size: 12px;
+        }
+
+        /* ② 标题区域 */
+        .header {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .header h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+        }
+
+        .header p {
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        /* ③ 定价卡片区域（Flex布局） */
+        .pricing-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background-color: #2b2b2b;
+            border: 1px solid #555;
+            border-radius: 8px;
+            width: 220px;
+            padding: 20px;
+        }
+
+        .card.highlight {
+            border: 2px solid #39ff14;
+        }
+
+        .card-title {
+            color: #39ff14;
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        /* 优惠标签统一绿色，和免费文字颜色一致 */
+        .discount-tag{
+            color:#39ff14;
+            font-size:12px;
+        }
+
+        .price {
+            font-size: 28px;
+            margin-bottom: 20px;
+        }
+
+        .feature {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .btn.free {
+            background-color: #555;
+            color: #fff;
+        }
+
+        .btn.upgrade {
+            background-color: #e0fff0;
+            color: #000;
+        }
+
+        .btn.normal {
+            background-color: #555;
+            color: #fff;
+        }
+
+        /* 优速通Express卡片 */
+        .express-card {
+            background-color: #2b2b2b;
+            border: 1px solid #555;
+            border-radius: 8px;
+            width: 920px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .express-left .tag {
+            background-color: #ffb700;
+            color: #000;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- ① 导航栏 -->
+    <div class="nav">
+        <div class="nav-logo">TRAE</div>
+        <a href=" ">产品</a >
+        <a href="#">企业版</a >
+        <a href="#">定价</a >
+        <a href="#">文档</a >
+        <a href="#">更新日志</a >
+        <a href="#">社区</a >
+        <a href="#">创造力大赛 <span class="hot-tag">Hot</span></a >
+    </div>
+
+    <!-- ② 标题区域 -->
+    <div class="header">
+        <h1>个人方案与定价</h1>
+        <p>企业版选型与咨询，前往火山引擎 ↗</p >
+    </div>
+
+    <!-- ③ 定价卡片区域 -->
+    <div class="pricing-container">
+        <!-- 免费卡片 -->
+        <div class="card">
+            <div class="card-title">免费</div>
+            <div class="price">¥0</div>
+            <div class="feature">✅ 所有功能均可免费使用</div>
+            <div class="feature">✅ 支持2个云端任务同时执行</div>
+            <button class="btn free">免费使用</button>
+        </div>
+
+        <!-- 速通Pro卡片（高亮） -->
+        <div class="card highlight">
+            <div class="card-title">速通 Pro <span class="discount-tag">新用户限时优惠</span></div>
+            <div class="price">低至 ¥59 <span style="font-size:14px; color:#ccc;">/月 ¥99</span></div>
+            <div class="feature">✦ 每月100次免排队速通次数</div>
+            <div class="feature">✅ 支持10个云端任务同时执行</div>
+            <button class="btn upgrade">立即升级</button>
+        </div>
+
+        <!-- 速通Pro+卡片 -->
+        <div class="card">
+            <div class="card-title">速通 Pro+</div>
+            <div class="price">¥239 <span style="font-size:14px; color:#ccc;">/月</span></div>
+            <div class="feature">✦ 每月300次免排队速通次数</div>
+            <div class="feature">✅ 支持10个云端任务同时执行</div>
+            <button class="btn normal">立即升级</button>
+        </div>
+
+        <!-- 速通Ultra卡片 -->
+        <div class="card">
+            <div class="card-title">速通 Ultra</div>
+            <div class="price">¥699 <span style="font-size:14px; color:#ccc;">/月</span></div>
+            <div class="feature">✦ 每月1000次免排队速通次数</div>
+            <div class="feature">✅ 支持20个云端任务同时执行</div>
+            <div class="feature">✅ 优先解锁SOTA模型</div>
+            <button class="btn normal">立即升级</button>
+        </div>
+    </div>
+
+    <!-- 优速通Express卡片 -->
+    <div class="express-card">
+        <div class="express-left">
+            <div style="display: flex; align-items: center;">
+                <h3>优速通 Express</h3>
+                <span class="tag">限量发售</span>
+            </div>
+            <div class="price">¥1999 <span style="font-size:14px; color:#ccc;">/月</span></div>
+        </div>
+        <div class="express-features">
+            <div class="feature">✦ 有效期内无限次免排队速通次数</div>
+            <div class="feature">✅ 支持20个云端任务同时执行</div>
+            <div class="feature">✅ 优先解锁SOTA模型</div>
+        </div>
+        <button class="btn normal" style="width: 150px;">立即升级</button>
+    </div>
+</body>
+</html>
+</body>
+</html>
